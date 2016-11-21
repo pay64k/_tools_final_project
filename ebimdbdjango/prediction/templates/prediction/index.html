@@ -4,13 +4,36 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
-Prdiction lalala
-<br>
 
-{% for bla in movies%}
-<a href="/prediction/{{ bla.id }}/">{{ bla.id }}</a>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Logo -->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">BLA</a>
+        </div>
+    </div>
+</nav>
+
+<body>
+
+{% load staticfiles %}
+<link rel="stylesheet"  type="text/css" href="{% static 'prediction/style.css' %}">
+<link rel="stylesheet"  type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+
+<h1>Prediction</h1>
 <br>
-{% endfor %}
+{% if movies %}
+    {% for movie in movies%}
+    <a href="/prediction/{{ movie.id }}/">{{ movie.id }}</a>
+    <br>
+    {% endfor %}
+
+{% else %}
+    <h3>No movies to display</h3>
+
+{% endif %}
+
 </body>
 </html>
