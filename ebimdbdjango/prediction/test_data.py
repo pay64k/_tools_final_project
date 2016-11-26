@@ -6,3 +6,4 @@ def print_some_data():
         "data_jakub"
     ]
     return sample_data
+
