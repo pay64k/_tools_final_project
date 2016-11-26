@@ -24,9 +24,9 @@
 
 <h1>Prediction</h1>
 <br>
-{% if movies %}
-    {% for movie in movies%}
-    <a href="/prediction/{{ movie.id }}/">{{ movie.id }}</a>
+{% if test_data %}
+    {% for entry in test_data%}
+    <a href="/prediction/{{ entry }}/">{{ entry }}</a>
     <br>
     {% endfor %}
 
