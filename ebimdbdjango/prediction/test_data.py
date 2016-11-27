@@ -7,6 +7,3 @@ def print_some_data():
         "data_test_2"
     ]
     return sample_data
-
-def simple_foo():
-    return

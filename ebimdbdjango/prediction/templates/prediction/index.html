@@ -23,10 +23,13 @@
 
 
 <h1>Prediction</h1>
+<h2>THIS is another test yo</h2>
 <br>
 {% if test_data %}
-    {% for entry in test_data%}
-    <a href="/prediction/{{ entry }}/">{{ entry }}</a>
+
+    {% for key, entry in test_data.items %}
+
+    <a href="/prediction/{{ key }}/">{{key}} {{ entry.actor1 }}</a>
     <br>
     {% endfor %}
 
@@ -34,6 +37,8 @@
     <h3>No movies to display</h3>
 
 {% endif %}
+
+
 
 </body>
 </html>
