@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Logo -->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">BLA</a>
+        </div>
+    </div>
+</nav>
+
+<body>
+
+{% load staticfiles %}
+<link rel="stylesheet"  type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<div class="row">
+    <div class="col-md-2 col-md-offset-1">
+
+        <h1>Data Analysis</h1>
+        <br>
+        {% if data1 %}
+
+            <p>{{data1}}</p>
+            <!--{% for key, entry in test_data.items %}-->
+
+            <!--<a href="/prediction/{{ key }}/">{{key}} {{ entry.actor1 }}</a>-->
+            <!--<br>-->
+            <!--{% endfor %}-->
+
+        {% else %}
+            <h3>No plot to display</h3>
+
+        {% endif %}
+
+        <h2>Sample image</h2>
+        <img src="graphs/gross.png">
+
+        <h2>Sample image</h2>
+        <img src="graphs/sample.png">
+
+</div>
+</div>
+
+</body>
+</html>
